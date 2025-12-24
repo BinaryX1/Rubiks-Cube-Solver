@@ -5,15 +5,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-
-
-
 public class SolverController {
-    @GetMapping("/")
-    public String greeting(){
-        Solver solver = new Solver();
-        return "Hello world";
-    }
+//    @GetMapping("/")
+//    public String greeting(){
+//        return "index";
+//    }
 
     @GetMapping("/greeting")
     public Greeting greeting2(){
@@ -22,6 +18,6 @@ public class SolverController {
 
     @GetMapping("/Solve")
     public String solve(){
-        Solver solver = new Solver();
+        return Solver.solve3("OOOGOBOOOGOGWWWBOBYYYYGWGWBWBYBYGGRGWWWBRBYYYRRRGRBRRR");
     }
 }
