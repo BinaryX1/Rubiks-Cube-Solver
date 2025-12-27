@@ -16,8 +16,8 @@ public class SolverController {
         return new Greeting(1, "Hello world");
     }
 
-    @GetMapping("/Solve")
-    public String solve(){
-        return Solver.solve3("OOOGOBOOOGOGWWWBOBYYYYGWGWBWBYBYGGRGWWWBRBYYYRRRGRBRRR");
+    @GetMapping("/api/Solve")
+    public String solve(String scramble){
+        return Solver.solve3(scramble);
     }
 }
