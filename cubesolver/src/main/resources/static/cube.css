@@ -9,12 +9,13 @@
     display: grid;
     grid-template-columns: 154px 154px 154px 154px;
     grid-template-rows: 154px 154px 154px;
+    place-content: center;
 }
 
 .container{
     display: grid;
     grid-template-columns: 50px 50px 50px;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: 50px 50px 50px;
 }
 
 .red-face{

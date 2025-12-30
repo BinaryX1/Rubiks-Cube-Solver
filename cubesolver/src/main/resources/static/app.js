@@ -1,3 +1,6 @@
+let rawString = "OOOOOOOOOGGGWWWBBBYYYGGGWWWBBBYYYGGGWWWBBBYYYRRRRRRRRR";
+let stickerarray = rawString.split("");
+
 function solveTheCube(){
     let userScramble = document.getElementById("scrambleInput").value;
 
