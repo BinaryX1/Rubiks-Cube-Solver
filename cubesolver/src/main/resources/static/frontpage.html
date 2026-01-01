@@ -7,12 +7,20 @@
 </head>
 <body>
     <h1> Cube Solver</h1>
-    <input type = "text" id = "scrambleInput">
     <button type = "button" onclick = "solveTheCube()">Solve</button>
     <p>Solution: <span id = "solutionDisplay">Waiting...</span></p>
-    <script src = "app.js"></script>
-    <div class = "sticker green-face"></div>
-    <div class = "rubiks-board" >
+    <div class = "rubiks-board" id = "rubiks-board">
+        <div class = "container" style = "grid-column: 2; grid-row: 1;">
+            <button class = "sticker orange-face"> </button>
+            <button class = "sticker orange-face"> </button>
+            <button class = "sticker orange-face"> </button>
+            <button class = "sticker orange-face"> </button>
+            <button class = "sticker orange-face"> </button>
+            <button class = "sticker orange-face"> </button>
+            <button class = "sticker orange-face"> </button>
+            <button class = "sticker orange-face"> </button>
+            <button class = "sticker orange-face"> </button>
+        </div>
         <div class = "container" style = "grid-column: 1; grid-row: 2;">
             <button class = "sticker green-face"> </button>
             <button class = "sticker green-face"> </button>
@@ -34,17 +42,6 @@
             <button class = "sticker white-face"> </button>
             <button class = "sticker white-face"> </button>
             <button class = "sticker white-face"> </button>
-        </div>
-        <div class = "container" style = "grid-column: 2; grid-row: 1;">
-            <button class = "sticker orange-face"> </button>
-            <button class = "sticker orange-face"> </button>
-            <button class = "sticker orange-face"> </button>
-            <button class = "sticker orange-face"> </button>
-            <button class = "sticker orange-face"> </button>
-            <button class = "sticker orange-face"> </button>
-            <button class = "sticker orange-face"> </button>
-            <button class = "sticker orange-face"> </button>
-            <button class = "sticker orange-face"> </button>
         </div>
         <div class = "container" style = "grid-column: 3; grid-row: 2;">
             <button class = "sticker blue-face"> </button>
@@ -80,5 +77,67 @@
             <button class = "sticker red-face"> </button>
         </div>
     </div>
+    <script src = "app.js"></script>
+    <script>
+        const orangeStickers = document.querySelectorAll('.orange-face');
+        orangeStickers.forEach((sticker, index) => {
+            sticker.dataset.index = index;
+            sticker.innerText = index;
+        });
+
+        const greenStickers = document.querySelectorAll('.green-face');
+        for(let i = 0; i < 3; i++){
+            greenStickers[i].dataset.index = 9+i;
+        }
+        greenStickers[3].dataset.index = 21;
+        greenStickers[4].dataset.index = 22;
+        greenStickers[5].dataset.index = 23;
+        greenStickers[6].dataset.index = 33;
+        greenStickers[7].dataset.index = 34;
+        greenStickers[8].dataset.index = 35;
+
+        const whiteStickers = document.querySelectorAll('.white-face');
+        whiteStickers[0].dataset.index = 12;
+        whiteStickers[1].dataset.index = 13;
+        whiteStickers[2].dataset.index = 14;
+        whiteStickers[3].dataset.index = 24;
+        whiteStickers[4].dataset.index = 25;
+        whiteStickers[5].dataset.index = 26;
+        whiteStickers[6].dataset.index = 36;
+        whiteStickers[7].dataset.index = 37;
+        whiteStickers[8].dataset.index = 38;
+
+        const blueStickers = document.querySelectorAll('.blue-face');
+        blueStickers[0].dataset.index = 15;
+        blueStickers[1].dataset.index = 16;
+        blueStickers[2].dataset.index = 17;
+        blueStickers[3].dataset.index = 27;
+        blueStickers[4].dataset.index = 28;
+        blueStickers[5].dataset.index = 29;
+        blueStickers[6].dataset.index = 39;
+        blueStickers[7].dataset.index = 40;
+        blueStickers[8].dataset.index = 41;
+
+        const yellowStickers = document.querySelectorAll('.yellow-face');
+        yellowStickers[0].dataset.index = 18;
+        yellowStickers[1].dataset.index = 19;
+        yellowStickers[2].dataset.index = 20;
+        yellowStickers[3].dataset.index = 30;
+        yellowStickers[4].dataset.index = 31;
+        yellowStickers[5].dataset.index = 32;
+        yellowStickers[6].dataset.index = 42;
+        yellowStickers[7].dataset.index = 43;
+        yellowStickers[8].dataset.index = 44;
+
+        const redStickers = document.querySelectorAll('.red-face');
+        redStickers.forEach((sticker, index) => {
+            sticker.dataset.index = 45+index;
+        });
+
+        const allStickers = document.querySelectorAll('.sticker');
+        allStickers.forEach((sticker) => {
+            sticker.innerText = sticker.dataset.index;
+        });
+    </script>
 </body>
 </html>

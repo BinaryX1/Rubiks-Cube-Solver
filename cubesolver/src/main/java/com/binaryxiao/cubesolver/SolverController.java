@@ -19,6 +19,7 @@ public class SolverController {
 
     @GetMapping("/api/Solve")
     public String solve(String scramble){
+        System.out.println(scramble);
         return Solver.solve3(scramble);
     }
 
