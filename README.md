@@ -1,1 +1,1 @@
-"Note: This repository is the web implementation of my core solving engine. For the full commit history and development of the algorithm (IDA*, Pattern Databases), please see the https://github.com/BinaryX1/Rubiks-Cube-Solver-Engine
+Note: This repository is the web implementation of my core solving engine. For the full commit history and development of the algorithm (IDA*, Pattern Databases), please see the https://github.com/BinaryX1/Rubiks-Cube-Solver-Engine
