@@ -45,6 +45,8 @@ function stickerChange(event){
 }
 
 function solveTheCube(){
+    document.getElementById("solutionDisplay").innerText = "processing..."
+
     let userScramble = stickerarray.join("");
 
     let url = "http://localhost:8080/api/Solve?scramble=" + encodeURIComponent(userScramble);

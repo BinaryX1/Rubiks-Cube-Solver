@@ -211,9 +211,11 @@ public class Solver {
             cpSliceTable = PruningTable.CornerPermutationSlicePruning(cpMoves, sliceMoves2);
             epSliceTable = PruningTable.EdgePermutationSlicePruning(epMoves, sliceMoves2);
             String phase2solution = Solve2(phase1);
+            System.out.println(phase2solution);
             cube.applyMoves(phase2solution);
             System.out.println(cube);
             String solution = phase1solution + phase2solution;
+            System.out.println(solution);
             return solution;
         }
 
