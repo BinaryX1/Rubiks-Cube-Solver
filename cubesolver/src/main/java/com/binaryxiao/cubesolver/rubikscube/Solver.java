@@ -1,11 +1,14 @@
 package com.binaryxiao.cubesolver.rubikscube;
 
+import org.springframework.stereotype.Component;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.invoke.MethodHandles;
 import java.util.*;
 
+@Component //Set the Solver engine as a bean that Spring can manage
 public class Solver {
     static byte[][] eoSliceTable;
     static byte[][] coSliceTable;
@@ -192,7 +195,7 @@ public class Solver {
         return "deez";
     }
 
-    public static String solve3(String cubecode){
+    public String solve3(String cubecode){
         RubiksCube solved = new RubiksCube();
         cubeState root = new cubeState(solved);
         int[][] coMoves = MoveTable.CornerOrientationMoveTable(root);
