@@ -1,0 +1,5 @@
+/target/
+/cubesolver/target/
+.idea/
+*.iml
+*.class
