@@ -1,0 +1,252 @@
+.app {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 1.75rem 1.25rem 3rem;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.app-title {
+  margin: 0 0 0.35rem;
+  font-size: 1.65rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #12121a;
+}
+
+.app-tagline {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #4a4a55;
+}
+
+.panel {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 0;
+  padding: 1.15rem 1.25rem;
+  box-shadow: none;
+  backdrop-filter: blur(8px);
+}
+
+.panel-title {
+  margin: 0 0 0.65rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.instructions p {
+  margin: 0 0 0.65rem;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #33333c;
+}
+
+.instructions p:last-child {
+  margin-bottom: 0;
+}
+
+.instructions-moves {
+  font-size: 0.82rem;
+  color: #4d4d57;
+}
+
+.cube-section {
+  display: flex;
+  justify-content: center;
+  margin: 1.75rem 0;
+}
+
+.rubiks-board {
+  display: grid;
+  grid-template-columns: 154px 154px 154px 154px;
+  grid-template-rows: 154px 154px 154px;
+  place-content: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 0;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: none;
+}
+
+.face-container {
+  display: grid;
+  grid-template-columns: 50px 50px 50px;
+  grid-template-rows: 50px 50px 50px;
+  gap: 0;
+}
+
+.sticker {
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  border: 2px solid #1a1a1e;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    transform 0.14s ease,
+    box-shadow 0.14s ease,
+    filter 0.14s ease;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.12);
+}
+
+.sticker:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+  filter: brightness(1.05);
+}
+
+.sticker:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+}
+
+.sticker:focus-visible {
+  outline: 3px solid #2a6fd4;
+  outline-offset: 2px;
+}
+
+.red-face {
+  background-color: #e53935;
+}
+
+.blue-face {
+  background-color: #1e6bd6;
+}
+
+.green-face {
+  background-color: #2e7d32;
+}
+
+.white-face {
+  background-color: #fafafa;
+}
+
+.yellow-face {
+  background-color: #fdd835;
+}
+
+.orange-face {
+  background-color: #fb8c00;
+}
+
+.actions {
+  margin-top: 0.5rem;
+}
+
+.actions-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.65rem 1.35rem;
+  border-radius: 0;
+  border: 1px solid #333;
+  cursor: pointer;
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease,
+    background 0.12s ease,
+    opacity 0.12s ease;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.75;
+}
+
+.btn-primary {
+  background: #e0e0e0;
+  color: #000;
+  min-width: 8.5rem;
+  box-shadow: none;
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: none;
+  box-shadow: none;
+  background: #d0d0d0;
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: none;
+}
+
+.btn-ghost {
+  background: #f5f5f5;
+  color: #000;
+  border: 1px solid #333;
+  box-shadow: none;
+}
+
+.btn-ghost:hover:not(:disabled) {
+  background: #e8e8e8;
+  transform: none;
+}
+
+.btn-loading {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.spinner {
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.65s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.solution-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.solution-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #5c5c66;
+}
+
+.solution-output {
+  display: block;
+  font-family: inherit;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #000;
+  min-height: 2.75rem;
+  padding: 0.65rem 0.75rem;
+  background: #f5f5f5;
+  border-radius: 0;
+  border: 1px solid #333;
+  word-break: break-word;
+}
+
+@media (max-width: 720px) {
+  .rubiks-board {
+    transform: scale(0.92);
+    transform-origin: top center;
+  }
+}

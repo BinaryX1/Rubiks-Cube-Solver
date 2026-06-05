@@ -9,5 +9,4 @@ public class CubesolverApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(CubesolverApplication.class, args);
 	}
-
 }
